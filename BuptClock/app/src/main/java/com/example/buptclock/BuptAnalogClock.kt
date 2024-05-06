@@ -102,8 +102,8 @@ fun BuptAnalogClock(
                     }
                 }
 
-                val hourRatio = hour / 12f
-                val minuteRatio = minute / 60f
+                val hourRatio = hour / 12f + minute / 720f + second / 43200f
+                val minuteRatio = minute / 60f + second / 3600f
                 val secondRatio = second / 60f
 
                 rotate(hourRatio * 360, center) {
